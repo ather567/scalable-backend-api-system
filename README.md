@@ -1,4 +1,3 @@
-# scalable-backend-api-system
 /backend-api-system
  ├── app/
  │   ├── routes/
