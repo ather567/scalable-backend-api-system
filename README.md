@@ -1,13 +1,3 @@
-/backend-api-system
- ├── app/
- │   ├── routes/
- │   ├── services/
- │   ├── models/
- │   ├── utils/
- ├── tests/
- ├── config/
- ├── README.md
- 
 # Scalable Backend API System (Python)
 
 ## Overview
@@ -35,6 +25,17 @@ This project is a backend system built using Python, designed with a focus on cl
 The system follows a modular design:
 Client Request → Route Layer → Service Layer → Data Layer → Response
 
+## System Flow Diagram
+Client
+↓
+[Route Layer]
+↓
+[Service Layer]
+↓
+[Data Layer / Database]
+↓
+Response (JSON)
+
 ### Layers:
 
 - **Routes**
@@ -56,6 +57,27 @@ Client Request → Route Layer → Service Layer → Data Layer → Response
   - Logging / error formatting
 
 ---
+## Example API Response
+
+{
+  "status": "success",
+  "data": {
+    "id": 101,
+    "name": "Sample Item"
+  },
+  "error": null
+}
+
+## Error Handling Example
+
+{
+  "status": "error",
+  "data": null,
+  "error": {
+    "code": "INVALID_INPUT",
+    "message": "Required field 'name' is missing"
+  }
+}
 
 ## Key Engineering Decisions
 
@@ -98,6 +120,13 @@ Errors are handled in a consistent format to ensure clients can reliably interpr
 
 ---
 
+## Testing Strategy
+
+- Unit testing for service logic
+- Validation testing for API inputs
+- Edge case testing (empty input, invalid data)
+- Manual API testing using Postman
+- 
 ## Future Improvements
 
 - Add authentication & authorization
