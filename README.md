@@ -126,7 +126,7 @@ Errors are handled in a consistent format to ensure clients can reliably interpr
 - Validation testing for API inputs
 - Edge case testing (empty input, invalid data)
 - Manual API testing using Postman
-- 
+  
 ## Future Improvements
 
 - Add authentication & authorization
